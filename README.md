@@ -31,3 +31,17 @@ It is important to break the problem down into smaller testable pieces, and writ
 
 Please spend up to 2 hours on the task. Provide java code files in a text document, zip or github.  If you make any assumptions, please add comments in the code or into the document.
 <End>
+
+
+---
+## DEVELOPER NOTES
+#### HOW TO RUN
+Run mvi.demo.fx.listener.EndToEndPriceDataListenerTest for a demo of the listener with fees set at 0.1 and all the mappers set.
+
+Use JDK 11 or more and "gradlew build" for a full build. Please see the other junit tests for other corner cases. So assumptions were made and explained in comments.
+
+### Further explanations
+The timestamp and id aren't parsed. There is no need to parse them, so it's faster to just send them as they arrive
+
+This implementation has the main architectural issue that it blocks the receiving thread while it's doing a REST call. 
+The impact on performances would be immense. In a productive environment this would be hard to accept.   
