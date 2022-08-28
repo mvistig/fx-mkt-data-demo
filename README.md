@@ -38,7 +38,8 @@ Please spend up to 2 hours on the task. Provide java code files in a text docume
 #### HOW TO RUN
 Run mvi.demo.fx.listener.EndToEndPriceDataListenerTest for a demo of the listener with fees set at 0.1 and all the mappers set.
 
-Use JDK 11 or more and "gradlew build" for a full build. Please see the other junit tests for other corner cases. So assumptions were made and explained in comments.
+Use JDK 11 or more and "gradlew build" for a full build. Please see the other junit tests for other corner cases. 
+Some assumptions were made and they were explained in comments.
 
 ### Further explanations
 The timestamp and id aren't parsed. There is no need to parse them, so it's faster to just send them as they arrive
